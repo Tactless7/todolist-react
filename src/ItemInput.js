@@ -9,7 +9,9 @@ class ItemInput extends React.Component {
       id : Date.now(),
       content : this.itemInput.value
     }
-    console.log(newItem.content);
+    console.log(newItem.content)
+
+    this.props.onNewTask(newItem);
   }
 
   render() {

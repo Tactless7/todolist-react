@@ -1,4 +1,5 @@
 import React from 'react';
+import ItemInput from './ItemInput';
 
 class Items extends React.Component {
   constructor(){
@@ -16,12 +17,20 @@ class Items extends React.Component {
       ]
     }
   }
+
+  addNewTask = (task) => {
+    console.log(task);
+  }
+
   render() {
     const listItems = this.state.items.map((item) => {
       return <li key={ item.id.toString() }> { item.content } </li>
     });
     return (
-      <ul>{ listItems }</ul>
+      <div>
+        <ItemInput onNewTask={ this.addNewTask } />
+        <ul>{ listItems }</ul>
+      </div>
     )
   }
 }
