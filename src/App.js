@@ -17,10 +17,15 @@ class App extends React.Component {
         }
       ]
     };
-  }
+  };
 
   addNewTask = (task) => {
-    console.log(task);
+    let newItems = Object.assign([], this.state.items);
+    newItems.push(task);
+
+    this.setState({
+      items : newItems
+    });
   }
 
 
