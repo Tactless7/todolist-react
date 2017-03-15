@@ -1,14 +1,13 @@
 import React from 'react';
 
 class ItemInput extends React.Component {
-  
+
   handleSubmit = (event) =>{
     event.preventDefault();
 
-    const newItemContent = this.itemInput.value;
     const newItem = {
       id : Date.now(),
-      content : newItemContent
+      content : this.itemInput.value
     }
     console.log(newItem.content);
   }
