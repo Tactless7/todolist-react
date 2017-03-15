@@ -18,7 +18,7 @@ class Items extends React.Component {
   }
   render() {
     const listItems = this.state.items.map((item) => {
-      return <li key= { item.id.toString() } > { item.content } </li>
+      return <li key={ item.id.toString() }> { item.content } </li>
     });
     return (
       <ul>{ listItems }</ul>
